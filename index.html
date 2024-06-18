@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Set a fallback font */
+    background-color: #A72B2A;
+    line-height: 1.6; /* Improved readability with increased line height */
+}
+
+/* Basic styling for header */
+header {
+    background-color: #f0f0f0; 
+    color: #333; /* Changed header text color for better contrast */
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+}
+
+.logo {
+    max-height: 50px; /* Adjust as needed */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: middle; /* Align navigation items vertically */
+}
+
+nav ul li a {
+    color: #af4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+nav ul li a:hover {
+    color: #333; /* Darken color on hover */
+}
+
+/* Styling for main content section */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 100vh; /* Set section height to at least full viewport height */
+    padding: 2em;
+}
+
+.box {
+    flex: 1 1 calc(33.33% - 2em); /* Adjusted width to 33.33% with spacing */
+    background-color: #f0f0f0;
+    padding: 1.5em;
+    margin: 1em;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    height: 300px;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Lift the box slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Specific styling for the login box */
+.login-box {
+    flex: 1 1 100%; /* Full width for login box on smaller screens */
+    max-width: 400px;
+    margin: 0 auto; /* Center login box horizontally */
+    padding: 1em;
+    background-color: #fff; /* White background for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box button {
+    padding: 0.7em;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth transition for input focus */
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+    border-color: #af4a4a; /* Change border color on focus */
+}
+
+.login-box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for button background color */
+}
+
+.login-box button:hover {
+    background-color: #555;
+}
+
+.login-box p {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.login-box p a {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Styling for boxes with background images */
+.bg-image {
+    background-image: url('img/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color to white for better contrast */
+    height: 300px;
+    text-align: center; /* Center text content */
+}
+
+/* Additional box styling */
+.box h2 {
+    margin-bottom: 0.5em;
+    color: #333;
+    font-size: 1.5em; /* Increased font size for headings */
+}
+
+.box p {
+    color: #666;
+    line-height: 1.6; /* Improved readability with slightly increased line height */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        gap: 20px; /* Add gap between boxes */
+    }
+
+    .box {
+        flex: 1 1 calc(50% - 20px); /* 2 boxes per row with gap */
+    }
+}
+
+@media (max-width: 429px) {
+    .box {
+        flex: 1 1 100%; /* 1 box per row */
+        margin: 0;
+    }
+
+    .login-box {
+        max-width: 100%; /* Full width for login box */
+    }
+}
+
+@media (max-width: 320px) {
+    .login-box input[type="text"],
+    .login-box input[type="password"],
+    .login-box button {
+        padding: 0.5em; /* Adjusted padding for smaller screens */
+        max-width: 100%; /* Full width for inputs and button */
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-content">
+        <div class="box login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+        <div class="box">
+            <h2>What We Offer</h2>
+            <p>This is another new box added below.</p>
+        </div>
+        <div class="box">
+            <h2>Our Mission</h2>
+            <p>This is another new box added below.</p>
+        </div>
+        <div class="box bg-image">
+            <h2>Why Choose Us</h2>
+            <p>This is another new box added below.</p>
+        </div>
+        <div class="box">
+            <h2>New Box 1</h2>
+            <p>This is a new box added below.</p>
+        </div>
+        <div class="box bg-image">
+            <h2>Why Choose Us</h2>
+            <p>This is another new box added below.</p>
+        </div>
+        
+        <!-- New boxes added below -->
+        
+        <div class="box">
+            <h2>New Box 2</h2>
+            <p>This is another new box added below.</p>
+        </div>
+        
+    </section>
+</body>
+</html>
