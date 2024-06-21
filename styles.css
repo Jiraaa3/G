@@ -1,0 +1,290 @@
+/* Base styles */
+
+.navv {
+  background-color: #f0f0f0;
+}
+
+.food-munch-logo {
+  width: 160px;
+  height: auto;
+  max-width: 100%; /* Add max-width for responsive images */
+}
+
+.banner-section-bg-container {
+  background-image: url("img/clinic bg.png");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-heading {
+  color: #a72b2a;
+  font-family: "Serif";
+  font-size: 6vw;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.custom-button {
+  color: white;
+  background-image: linear-gradient(#d0b200, #a58d00);
+  width: 130px;
+  height: 45px;
+  border: none;
+  border-radius: 8px;
+  margin: 1em;
+  font-size: 1em;
+}
+
+.wcu-section {
+  background-color: #a72b2a;
+  padding: 2em 0;
+}
+
+.wcu-section-heading {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 3.5vw;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.wcu-section-description {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 2vw;
+  text-align: center;
+}
+
+.wcu-card {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #e5eaf4;
+  border-radius: 16px;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.wcu-card-image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.wcu-card-title {
+  color: #323f4b;
+  font-family: "Roboto";
+  font-size: 2.5vw;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.wcu-card-description {
+  color: #7b8794;
+  font-family: "Roboto";
+  font-size: 1.8vw;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 0 1em;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2em;
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b4/EARIST_%28Nagtahan%2C_Manila%3B_02-27-2022%29.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.login-box {
+  max-width: 90%;
+  width: 300px;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 500px;
+}
+
+.login-box h2 {
+  margin-bottom: 1em;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.login-box .form-group {
+  margin-bottom: 1.5em;
+}
+
+.login-box .form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box select,
+.login-box button {
+  padding: 0.7em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  font-size: 1em;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus,
+.login-box select:focus {
+  border-color: #af4a4a;
+  outline: none;
+}
+
+.login-box button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.login-box button:hover {
+  background-color: #555;
+}
+
+.login-box p {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.login-box p a {
+  color: #333;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.login-box p a:hover {
+  color: #555;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.thanking-customers-section {
+  background-color: #a72b2a;
+  color: #f0f0f0;
+}
+
+/* Media Query for 768px */
+@media (max-width: 768px) {
+  .wcu-card {
+      flex-direction: column; /* Adjusting cards vertically */
+      align-items: center; /* Aligning items vertically */
+  }
+
+  .wcu-card-title {
+      font-size: 5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-card-description {
+      font-size: 3.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .custom-button {
+      width: 100%; /* Making buttons full width */
+  }
+
+  .login-box {
+      width: 90%; /* Adjusting login box width */
+  }
+}
+
+/* Media Query for 430px */
+@media (max-width: 430px) {
+  .banner-heading {
+      font-size: 5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-section-heading {
+      font-size: 5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-section-description {
+      font-size: 3.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-card-title {
+      font-size: 4vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-card-description {
+      font-size: 3vw; /* Adjusting font size for responsiveness */
+  }
+
+  .custom-button {
+      width: 100%; /* Making buttons full width */
+      font-size: 3vw; /* Adjusting font size for responsiveness */
+  }
+
+  .login-box {
+      width: 100%; /* Making login box full width */
+      font-size: 3vw; /* Adjusting font size for responsiveness */
+  }
+}
+
+/* Media Query for 320px */
+@media (max-width: 320px) {
+  .banner-heading {
+      font-size: 4.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-section-heading {
+      font-size: 4.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-section-description {
+      font-size: 3vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-card-title {
+      font-size: 3.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .wcu-card-description {
+      font-size: 2.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .custom-button {
+      width: 100%; /* Making buttons full width */
+      font-size: 2.5vw; /* Adjusting font size for responsiveness */
+  }
+
+  .login-box {
+      width: 100%; /* Making login box full width */
+      font-size: 2.5vw; /* Adjusting font size for responsiveness */
+  }
+}
