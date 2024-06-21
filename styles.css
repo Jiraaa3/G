@@ -137,6 +137,20 @@
   font-weight: bold;
 }
 
+.modal-body .form-group label {
+  color: rgb(14, 14, 14);
+}
+
+.modal-body .form-group label {
+  color: rgb(14, 14, 14);
+}
+
+.modal-header .modal-title {
+  color: rgb(14, 14, 14);
+}
+
+
+
 .login-box input[type="text"],
 .login-box input[type="password"],
 .login-box select,
