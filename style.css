@@ -1,0 +1,97 @@
+/* Reset default styles and set box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+    width: 60%; /* Adjust the width as needed */
+    max-width: 1200px; /* Set a maximum width for large screens */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap; /* Allow the container to wrap items */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px auto; /* Adjust margin for spacing */
+}
+
+.tooth-chart {
+    width: 100%; /* Take full width of the container */
+    max-width: 450px; /* Set a maximum width for the tooth chart */
+    margin: 10px; /* Add space between items */
+}
+
+.tooth-chart svg {
+    width: 100%; /* Take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+}
+
+.tooth-chart .clicked {
+    fill: #ff0000 !important; /* Example style for clicked elements */
+}
+
+.features {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features .feature {
+    max-width: 300px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.features .feature h2 {
+    margin-bottom: 10px;
+}
+
+.features .feature p {
+    font-size: 14px;
+}
